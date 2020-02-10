@@ -272,34 +272,36 @@ _~~**선이 하나냐 두 개냐 그것이 문제로다**~~_
 
 이제 사괘와 태극무늬가 모두 완성이 됐지만 따로 각 요소의 위치를 잡아준 건 없기 때문에 `.태극기`에서 잡아 놓은 중앙 정렬로 모두 보일 것이다. 그렇기 때문에 이제 각 요소들의 중앙 정렬을 해주면 된다.
 
-    .건괘 {
-      position: absolute;
-      top: 15%;
-      left: 15%;
-      transform: rotate(40deg);
-    }
-    .감괘 {
-      position: absolute;
-      top: 15%;
-      right: 15%;
-      transform: rotate(-40deg);
-    }
-    .이괘 {
-      position: absolute;
-      bottom: 15%;
-      left: 15%;
-      transform: rotate(140deg);
-    }
-    .곤괘 {
-      position: absolute;
-      bottom: 15%;
-      right: 15%;
-      transform: rotate(-140deg);
-    }
+```css
+.건괘 {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  transform: rotate(40deg);
+}
+.감괘 {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  transform: rotate(-40deg);
+}
+.이괘 {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  transform: rotate(140deg);
+}
+.곤괘 {
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+  transform: rotate(-140deg);
+}
+```
 
 태극무늬는 태극기의 정중앙에 있기 때문에 사괘의 위치만 `absolute`를 이용하여 위치를 잡아줬으며, `transform: rotate(number)`를 통하여 사괘의 각도를 수정하여 완성! 하지만, 이 코드에 슬픈점은 `.태극기`가 `flex`로 선언이 되어 있기 때문에 사괘의 위치를 `flex`를 이용하여 잡고 싶었으나, 그렇게 되면 몇가지 제약이 생겨 포기했다.
 
-![assets/_.gif](assets/_.gif)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/50d56df2-f161-4f96-a041-5338a36e48c6/_.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAT73L2G45PJJIM4ER%2F20200210%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200210T021456Z&X-Amz-Expires=86400&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFEaCXVzLXdlc3QtMiJHMEUCIQCZLeSbJ%2FTvDbCJyVaXJ3kqD5czZ8%2FYlCkchA1ol4E64gIgRkAURaE9brehQ3Wm3Xd82y5KYcBEuCQ52ss%2F2M45mMoqvQMI%2Bv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyNzQ1NjcxNDkzNzAiDLErsH8oCPQ1kGl5JSqRA3DfSwFHfiZoyZC5MFRo402LLlavDMkCTPLdamrBv2DBxDgt7w0aN709PY0JJzKeuFAz%2Fl9lAqXwJMeBdii79OIAE3w2EToIf5DaVi%2FjF2tQM0b8%2BSz4ZD47Zcsd4Du3L7HtYHYmSJjTNZ2p68Lp3oHtTCyANz%2F3h6pYYqZSmijiwr30n72VnWqbnBjxJEQZJLII%2FuP9rHoHmu6tOyTUsskpI4dmB7QXB7hjO2aBf1kScKIUlRtEt6YPZaLdupIWoKAtUsiXqlxhOJvLA6sY3N0ZTMA2y7%2B4ww8oYettZR4b1QiPjzBhqNwXQ7kOD6gkEQzcb0GM2oFe7DqFEtEhvCeFiHs8DNEqgNhHNwnujESGX4dIXOGAEx9yL%2FVrKj6%2FYWHo8htK5rwq6w45XosRo83Vi0pfv8pevdzYAnbLC%2FGCvZ2eCJgxrXt2vJ1w4QDC%2FQFLAvDKtqt7jzjhiR6mNrGdYOUXX8NlKAm%2F%2F7ySxdnNuv2SoCaunB7NKJml05sDkMJ9JCX1dFTdMoPVj6mO6XkfMInHgvIFOusBwb8ZXD%2BTC75CdzgPzijMU4W1i9HiYjhte8TK9Gtm%2Fh%2FyqssbrFgJXEW2%2BbX9iVUtjsBbiZYkhA0lv2Z3mj1%2Fc%2Fcsqz13W3KeC6vMQnPWy7eMc22HZpVaWExMlTev1lnbdAqCXjQEH9LlEnwzFAF5Y3%2F3m7xlwRKKA6o8uCeuN%2BqGENzyw5Fcp8pzgPkw8vmHWt13iPh7yzSV8Ja9yUSPUd7mx8qf5c8wCdKQ4JLx6SzkBMA0farYdtauYhP7T901buFGakD1Ni8IO06o8lI5LtsQwIAOBkKfZbeSq8Iri3XZgFC10UOc6xg%2BSA%3D%3D&X-Amz-Signature=19f7165959179e68d9745b2e405f462d1ce7ea7441e0cd8d93224e4dcf8d9e49&X-Amz-SignedHeaders=host](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/50d56df2-f161-4f96-a041-5338a36e48c6/_.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAT73L2G45PJJIM4ER%2F20200210%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200210T021456Z&X-Amz-Expires=86400&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFEaCXVzLXdlc3QtMiJHMEUCIQCZLeSbJ%2FTvDbCJyVaXJ3kqD5czZ8%2FYlCkchA1ol4E64gIgRkAURaE9brehQ3Wm3Xd82y5KYcBEuCQ52ss%2F2M45mMoqvQMI%2Bv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyNzQ1NjcxNDkzNzAiDLErsH8oCPQ1kGl5JSqRA3DfSwFHfiZoyZC5MFRo402LLlavDMkCTPLdamrBv2DBxDgt7w0aN709PY0JJzKeuFAz%2Fl9lAqXwJMeBdii79OIAE3w2EToIf5DaVi%2FjF2tQM0b8%2BSz4ZD47Zcsd4Du3L7HtYHYmSJjTNZ2p68Lp3oHtTCyANz%2F3h6pYYqZSmijiwr30n72VnWqbnBjxJEQZJLII%2FuP9rHoHmu6tOyTUsskpI4dmB7QXB7hjO2aBf1kScKIUlRtEt6YPZaLdupIWoKAtUsiXqlxhOJvLA6sY3N0ZTMA2y7%2B4ww8oYettZR4b1QiPjzBhqNwXQ7kOD6gkEQzcb0GM2oFe7DqFEtEhvCeFiHs8DNEqgNhHNwnujESGX4dIXOGAEx9yL%2FVrKj6%2FYWHo8htK5rwq6w45XosRo83Vi0pfv8pevdzYAnbLC%2FGCvZ2eCJgxrXt2vJ1w4QDC%2FQFLAvDKtqt7jzjhiR6mNrGdYOUXX8NlKAm%2F%2F7ySxdnNuv2SoCaunB7NKJml05sDkMJ9JCX1dFTdMoPVj6mO6XkfMInHgvIFOusBwb8ZXD%2BTC75CdzgPzijMU4W1i9HiYjhte8TK9Gtm%2Fh%2FyqssbrFgJXEW2%2BbX9iVUtjsBbiZYkhA0lv2Z3mj1%2Fc%2Fcsqz13W3KeC6vMQnPWy7eMc22HZpVaWExMlTev1lnbdAqCXjQEH9LlEnwzFAF5Y3%2F3m7xlwRKKA6o8uCeuN%2BqGENzyw5Fcp8pzgPkw8vmHWt13iPh7yzSV8Ja9yUSPUd7mx8qf5c8wCdKQ4JLx6SzkBMA0farYdtauYhP7T901buFGakD1Ni8IO06o8lI5LtsQwIAOBkKfZbeSq8Iri3XZgFC10UOc6xg%2BSA%3D%3D&X-Amz-Signature=19f7165959179e68d9745b2e405f462d1ce7ea7441e0cd8d93224e4dcf8d9e49&X-Amz-SignedHeaders=host)
 
 ```html
 <!DOCTYPE html>
