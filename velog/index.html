@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copylog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <style>
+      body {
+        display: grid;
+        grid-template:
+          [row1-start] "header header header" [row1-end]
+          [row2-start] "left-column main right-column" [row2-end] / 140px auto 140px;
+        grid-gap: 20px;
+      }
+      body > header {
+        display: grid;
+        grid-template: [row1-start] "header-left header-right" [row1-end] / auto;
+        grid-area: header;
+        align-content: center;
+        height: 80px;
+        border-bottom: solid 1px #ececec;
+      }
+      body > header h1 {
+        grid-area: header-left;
+        height: 100%;
+        margin: 0;
+        font-size: 25px;
+        font-style: italic;
+      }
+      body > header > * {
+        position: relative;
+      }
+      body > header a {
+        grid-area: header-right;
+      }
+      body > header button {
+        grid-area: header-right;
+        width: 100px;
+      }
+
+      body > main {
+        grid-area: main;
+      }
+
+      body > .left-column {
+        grid-area: left-column;
+      }
+      body > .right-column {
+        grid-area: right-column;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>velog</h1>
+      <a href="#">새 글 작성</a>
+      <button type="button">프로필 이미지</button>
+    </header>
+    <aside class="left-column">왼쪽 메뉴 영역</aside>
+    <main>포스팅 영역</main>
+    <aside class="right-column">
+      오른쪽 태그 영역
+    </aside>
+  </body>
+</html>
