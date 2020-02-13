@@ -17,29 +17,19 @@
         grid-gap: 20px;
       }
       body > header {
-        display: grid;
-        grid-template: [row1-start] "header-left header-right" [row1-end] / auto;
         grid-area: header;
-        align-content: center;
-        height: 80px;
-        border-bottom: solid 1px #ececec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        height: 65px;
+        -webkit-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
+        -moz-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
+        box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
       }
       body > header h1 {
-        grid-area: header-left;
-        height: 100%;
-        margin: 0;
         font-size: 25px;
         font-style: italic;
-      }
-      body > header > * {
-        position: relative;
-      }
-      body > header a {
-        grid-area: header-right;
-      }
-      body > header button {
-        grid-area: header-right;
-        width: 100px;
       }
 
       body > main {
@@ -57,8 +47,10 @@
   <body>
     <header>
       <h1>velog</h1>
-      <a href="#">새 글 작성</a>
-      <button type="button">프로필 이미지</button>
+      <div class="right-column">
+        <a href="#">새 글 작성</a>
+        <button type="button">프로필 이미지</button>
+      </div>
     </header>
     <aside class="left-column">왼쪽 메뉴 영역</aside>
     <main>포스팅 영역</main>
