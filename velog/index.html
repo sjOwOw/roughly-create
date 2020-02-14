@@ -13,23 +13,49 @@
         display: grid;
         grid-template:
           [row1-start] "header header header" [row1-end]
-          [row2-start] "left-column main right-column" [row2-end] / 140px auto 140px;
-        grid-gap: 20px;
+          [row2-start] "left-column main right-column" [row2-end] / 10rem auto 10rem;
+        grid-gap: 1rem;
       }
       body > header {
         grid-area: header;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 15px;
-        height: 65px;
-        -webkit-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
-        -moz-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
-        box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.2);
+        padding: 0 1rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.2);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.2);
+        box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.2);
       }
       body > header h1 {
-        font-size: 25px;
+        color: #333;
+        font-size: 1.5em;
         font-style: italic;
+      }
+
+      body > header .right-column {
+        font-size: 0.825rem;
+      }
+      body > header .right-column a {
+        display: inline-block;
+        height: 2em;
+        padding: 0 1em;
+        border: solid 1px #333;
+        border-radius: 1em;
+        color: #333;
+        text-decoration: none;
+        line-height: 2em;
+        transition: ease 0.3s;
+      }
+      body > header .right-column a:hover {
+        background-color: #333;
+        color: #fff;
+        transition: ease 0.3s;
+      }
+      body > header .right-column button {
+        height: 2em;
+        background-color: transparent;
       }
 
       body > main {
@@ -49,7 +75,7 @@
       <h1>velog</h1>
       <div class="right-column">
         <a href="#">새 글 작성</a>
-        <button type="button">프로필 이미지</button>
+        <button type="button">이미지</button>
       </div>
     </header>
     <aside class="left-column">왼쪽 메뉴 영역</aside>
