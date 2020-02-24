@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calender</title>
+    <style>
+      :root {
+        --sunday-color: red;
+        --saturday-color: blue;
+      }
+      .calender-wrapper .calender {
+        display: grid;
+      }
+      .calender-wrapper .calender._monthly {
+        grid-template:
+          [row1-start] "header" [row1-end]
+          [row2-start] "content" [row2-end];
+      }
+      .calender-wrapper .calender._monthly header {
+        grid-area: header;
+      }
+      .calender-wrapper .calender._monthly .content {
+        grid-area: content;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list {
+        display: grid;
+        grid-template: [week-start] "sunday monday tuesday wednesday thursday friday saturday" [week-end];
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .sunday {
+        grid-area: sunday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .monday {
+        grid-area: monday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .tuesday {
+        grid-area: tuesday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .wednesday {
+        grid-area: wednesday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .thursday {
+        grid-area: thursday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .friday {
+        grid-area: friday;
+      }
+      .calender-wrapper .calender._monthly .content .week .day-list .saturday {
+        grid-area: saturday;
+      }
+      .calender-wrapper .calender header ul li:first-child {
+        color: var(--sunday-color);
+      }
+      .calender-wrapper .calender header ul li:last-child {
+        color: var(--saturday-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calender-wrapper">
+      <section class="calender _monthly">
+        <header>
+          <h1>요일</h1>
+          <ul>
+            <li>일</li>
+            <li>월</li>
+            <li>화</li>
+            <li>수</li>
+            <li>목</li>
+            <li>금</li>
+            <li>토</li>
+          </ul>
+        </header>
+        <div class="content">
+          <div class="week">
+            <div class="day-list">
+              <div class="sunday">1</div>
+              <div class="monday">2</div>
+              <div class="tuesday">3</div>
+              <div class="wednesday">4</div>
+              <div class="thursday">5</div>
+              <div class="friday">6</div>
+              <div class="saturday">7</div>
+            </div>
+            <div class="schedule-list"></div>
+          </div>
+          <div class="week">
+            <div class="day-list">
+              <div class="sunday">1</div>
+              <div class="monday">2</div>
+              <div class="tuesday">3</div>
+              <div class="wednesday">4</div>
+              <div class="thursday">5</div>
+              <div class="friday">6</div>
+              <div class="saturday">7</div>
+            </div>
+            <div class="schedule-list"></div>
+          </div>
+          <div class="week">
+            <div class="day-list">
+              <div class="sunday">1</div>
+              <div class="monday">2</div>
+              <div class="tuesday">3</div>
+              <div class="wednesday">4</div>
+              <div class="thursday">5</div>
+              <div class="friday">6</div>
+              <div class="saturday">7</div>
+            </div>
+            <div class="schedule-list"></div>
+          </div>
+          <div class="week">
+            <div class="day-list">
+              <div class="sunday">1</div>
+              <div class="monday">2</div>
+              <div class="tuesday">3</div>
+              <div class="wednesday">4</div>
+              <div class="thursday">5</div>
+              <div class="friday">6</div>
+              <div class="saturday">7</div>
+            </div>
+            <div class="schedule-list"></div>
+          </div>
+          <div class="week">
+            <div class="day-list">
+              <div class="sunday">1</div>
+              <div class="monday">2</div>
+              <div class="tuesday">3</div>
+              <div class="wednesday">4</div>
+              <div class="thursday">5</div>
+              <div class="friday">6</div>
+              <div class="saturday">7</div>
+            </div>
+            <div class="schedule-list"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
