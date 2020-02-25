@@ -8,6 +8,7 @@
       :root {
         --sunday-color: red;
         --saturday-color: blue;
+        --calender-border: 1px solid #efefef;
       }
       .calender-wrapper .calender {
         display: grid;
@@ -25,7 +26,9 @@
       }
       .calender-wrapper .calender._monthly .content .week .day-list {
         display: grid;
-        grid-template: [week-start] "sunday monday tuesday wednesday thursday friday saturday" [week-end];
+        grid-template-rows: [week-start] 10rem [week-end];
+        grid-template-columns: repeat(7, minmax(10rem, 1fr));
+        grid-template-areas: "sunday monday tuesday wednesday thursday friday saturday";
       }
       .calender-wrapper .calender._monthly .content .week .day-list .sunday {
         grid-area: sunday;
@@ -48,6 +51,28 @@
       .calender-wrapper .calender._monthly .content .week .day-list .saturday {
         grid-area: saturday;
       }
+
+      .calender-wrapper .calender._monthly .content .week .day-list div {
+        border-right: var(--calender-border);
+        border-bottom: var(--calender-border);
+      }
+      .calender-wrapper
+        .calender._monthly
+        .content
+        .week:first-child
+        .day-list
+        div {
+        border-top: var(--calender-border);
+      }
+      .calender-wrapper
+        .calender._monthly
+        .content
+        .week
+        .day-list
+        div:first-child {
+        border-left: var(--calender-border);
+      }
+
       .calender-wrapper .calender header ul li:first-child {
         color: var(--sunday-color);
       }
