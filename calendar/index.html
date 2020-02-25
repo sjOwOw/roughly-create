@@ -3,87 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>calender</title>
+    <title>calendar</title>
     <style>
       :root {
         --sunday-color: red;
         --saturday-color: blue;
-        --calender-border: 1px solid #efefef;
+        --calendar-border: 1px solid #efefef;
       }
-      .calender-wrapper .calender {
+      .calendar-wrapper .calendar {
         display: grid;
       }
-      .calender-wrapper .calender._monthly {
+      .calendar-wrapper .calendar._monthly {
         grid-template:
           [row1-start] "header" [row1-end]
           [row2-start] "content" [row2-end];
       }
-      .calender-wrapper .calender._monthly header {
+      .calendar-wrapper .calendar._monthly header {
         grid-area: header;
       }
-      .calender-wrapper .calender._monthly .content {
+      .calendar-wrapper .calendar._monthly .content {
         grid-area: content;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list {
+      .calendar-wrapper .calendar._monthly .content .week .day-list {
         display: grid;
         grid-template-rows: [week-start] 10rem [week-end];
         grid-template-columns: repeat(7, minmax(10rem, 1fr));
         grid-template-areas: "sunday monday tuesday wednesday thursday friday saturday";
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .sunday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .sunday {
         grid-area: sunday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .monday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .monday {
         grid-area: monday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .tuesday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .tuesday {
         grid-area: tuesday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .wednesday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .wednesday {
         grid-area: wednesday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .thursday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .thursday {
         grid-area: thursday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .friday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .friday {
         grid-area: friday;
       }
-      .calender-wrapper .calender._monthly .content .week .day-list .saturday {
+      .calendar-wrapper .calendar._monthly .content .week .day-list .saturday {
         grid-area: saturday;
       }
 
-      .calender-wrapper .calender._monthly .content .week .day-list div {
-        border-right: var(--calender-border);
-        border-bottom: var(--calender-border);
+      .calendar-wrapper .calendar._monthly .content .week .day-list div {
+        border-right: var(--calendar-border);
+        border-bottom: var(--calendar-border);
       }
-      .calender-wrapper
-        .calender._monthly
+      .calendar-wrapper
+        .calendar._monthly
         .content
         .week:first-child
         .day-list
         div {
-        border-top: var(--calender-border);
+        border-top: var(--calendar-border);
       }
-      .calender-wrapper
-        .calender._monthly
+      .calendar-wrapper
+        .calendar._monthly
         .content
         .week
         .day-list
         div:first-child {
-        border-left: var(--calender-border);
+        border-left: var(--calendar-border);
       }
 
-      .calender-wrapper .calender header ul li:first-child {
+      .calendar-wrapper .calendar header ul li:first-child {
         color: var(--sunday-color);
       }
-      .calender-wrapper .calender header ul li:last-child {
+      .calendar-wrapper .calendar header ul li:last-child {
         color: var(--saturday-color);
       }
     </style>
   </head>
   <body>
-    <div class="calender-wrapper">
-      <section class="calender _monthly">
+    <div class="calendar-wrapper">
+      <section class="calendar _monthly">
         <header>
           <h1>요일</h1>
           <ul>
