@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Snap</title>
     <style>
-        .carousel-wrapper{
-            margin-top: 30px;
-        }
-        .carousel-wrapper.y {
-          overflow-y: scroll;
-          scroll-snap-type: y proximity;
-          width: 300px;
-          height: 300px;
-          color: #fff;
-        }
+      .carousel-wrapper {
+        margin-top: 30px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+      .carousel-wrapper.y {
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        width: 300px;
+        height: 300px;
+        color: #fff;
+      }
       .carousel-wrapper.x {
         display: flex;
         overflow-x: scroll;
@@ -52,19 +54,32 @@
   </head>
   <body>
     <div class="carousel-wrapper y">
-      <article>1</article>
-      <article>2</article>
-      <article>3</article>
-      <article>4</article>
-      <article>5</article>
+      <article id="y1">1</article>
+      <article id="y2">2</article>
+      <article id="y3">3</article>
+      <article id="y4">4</article>
+      <article id="y5">5</article>
     </div>
-    <body>
-      <div class="carousel-wrapper x">
-        <article>1</article>
-        <article>2</article>
-        <article>3</article>
-        <article>4</article>
-        <article>5</article>
-      </div>
+    <ol>
+      <li><a href="#y1">article 1</a></li>
+      <li><a href="#y2">article 2</a></li>
+      <li><a href="#y3">article 3</a></li>
+      <li><a href="#y4">article 4</a></li>
+      <li><a href="#y5">article 5</a></li>
+    </ol>
+    <div class="carousel-wrapper x">
+      <article id="x1">1</article>
+      <article id="x2">2</article>
+      <article id="x3">3</article>
+      <article id="x4">4</article>
+      <article id="x5">5</article>
+    </div>
+    <ol>
+      <li><a href="#x1">article 1</a></li>
+      <li><a href="#x2">article 2</a></li>
+      <li><a href="#x3">article 3</a></li>
+      <li><a href="#x4">article 4</a></li>
+      <li><a href="#x5">article 5</a></li>
+    </ol>
   </body>
 </html>
